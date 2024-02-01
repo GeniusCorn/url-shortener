@@ -6,11 +6,26 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "generate:db": "drizzle-kit generate:pg --config=./db/drizzle.config.ts",
+    "postinstall": "nuxt prepare",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "db:push": "drizzle-kit push:pg --config=./db/drizzle.config.ts"
+  },
+  "dependencies": {
+    "base62": "^2.0.1",
+    "drizzle-orm": "^0.29.3",
+    "postgres": "^3.4.3",
+    "unocss": "^0.58.4",
+    "unocss-preset-daisy": "^7.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.3",
+    "@unocss/eslint-plugin": "^0.58.3",
+    "@unocss/nuxt": "^0.58.3",
+    "@vueuse/core": "^10.7.2",
+    "@vueuse/nuxt": "^10.7.2",
+    "daisyui": "^3.9.4",
+    "drizzle-kit": "^0.20.13",
     "eslint": "^8.56.0",
     "nuxt": "^3.9.3",
     "vue": "^3.4.14",
