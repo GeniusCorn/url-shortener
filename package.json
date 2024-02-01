@@ -20,15 +20,15 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.3",
-    "@unocss/eslint-plugin": "^0.58.3",
-    "@unocss/nuxt": "^0.58.3",
+    "@unocss/eslint-plugin": "^0.58.4",
+    "@unocss/nuxt": "^0.58.4",
     "@vueuse/core": "^10.7.2",
     "@vueuse/nuxt": "^10.7.2",
     "daisyui": "^3.9.4",
-    "drizzle-kit": "^0.20.13",
+    "drizzle-kit": "^0.20.14",
     "eslint": "^8.56.0",
-    "nuxt": "^3.9.3",
-    "vue": "^3.4.14",
+    "nuxt": "^3.10.0",
+    "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   }
 }
