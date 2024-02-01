@@ -22,9 +22,11 @@ const shortenedUrl = computed(() => `${origin.value}/${data.value}`)
 const { copy, copied } = useClipboard()
 
 function onSubmit() {
+  if (status.value === 'pending')
+    return
+
   if (!body.url) {
     errMessage.value = 'Please enter URL.'
-
     return
   }
 
@@ -39,8 +41,8 @@ function onSubmit() {
 }
 
 function isValidUrl(url: string) {
-  // 使用正则表达式检测URL格式
   const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/
+
   return urlRegex.test(url)
 }
 </script>
@@ -66,6 +68,7 @@ function isValidUrl(url: string) {
         class="input input-bordered"
         type="text"
         placeholder="https://example.com"
+        @keydown.enter="onSubmit"
       >
 
       <button
