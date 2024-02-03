@@ -6,6 +6,8 @@
   <div h-screen flex items-center justify-center>
     <Navbar />
     <slot />
+
+    <Footer />
   </div>
 </template>
 
