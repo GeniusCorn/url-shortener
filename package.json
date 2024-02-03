@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.3",
+    "@iconify-json/tabler": "^1.1.105",
     "@unocss/eslint-plugin": "^0.58.4",
     "@unocss/nuxt": "^0.58.4",
     "@vueuse/core": "^10.7.2",

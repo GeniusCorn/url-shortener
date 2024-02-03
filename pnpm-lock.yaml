@@ -25,6 +25,9 @@ devDependencies:
   '@antfu/eslint-config':
     specifier: ^2.6.3
     version: 2.6.3(@unocss/eslint-plugin@0.58.4)(@vue/compiler-sfc@3.4.15)(eslint@8.56.0)(typescript@5.3.3)
+  '@iconify-json/tabler':
+    specifier: ^1.1.105
+    version: 1.1.105
   '@unocss/eslint-plugin':
     specifier: ^0.58.4
     version: 0.58.4(eslint@8.56.0)(typescript@5.3.3)
@@ -1193,6 +1196,12 @@ packages:
 
   /@humanwhocodes/object-schema@2.0.2:
     resolution: {integrity: sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==}
+    dev: true
+
+  /@iconify-json/tabler@1.1.105:
+    resolution: {integrity: sha512-USJbNfa0fAHBLilxTKn70wkvFnopmfcomfpqD0ul/69uyZnonztHhyrbM8MI9Ua4eYXaPymoB7tuZ+Ionx6xfg==}
+    dependencies:
+      '@iconify/types': 2.0.0
     dev: true
 
   /@iconify/types@2.0.0:

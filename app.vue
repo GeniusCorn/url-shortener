@@ -1,7 +1,7 @@
 <template>
-  <div h-screen flex items-center justify-center>
+  <NuxtLayout>
     <NuxtPage />
-  </div>
+  </NuxtLayout>
 </template>
 
 <style>
