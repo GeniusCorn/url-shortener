@@ -1,19 +1,27 @@
 import { db } from '~/db'
-import { codeToURL } from '~/db/schema'
+import { codeToURL, records } from '~/db/schema'
 
 export default defineEventHandler(async (event) => {
-  const code = getRouterParam(event, 'code')
+  const code: string = getRouterParam(event, 'code') as string
 
   try {
     const findURL = await db.query.codeToURL.findFirst({
-      where: (codeToURL, { eq }) => eq(codeToURL.code, code as string),
+      where: (codeToURL, { eq }) => eq(codeToURL.code, code),
     })
 
-    await db.update(codeToURL).set({
-      visits: findURL!.visits! + 1,
-    })
+    if (findURL) {
+      await db.update(codeToURL).set({
+        visits: findURL.visits + 1,
+      })
 
-    return findURL?.url
+      await db.insert(records).values({
+        ip: event.node.req.headers['x-forwarded-for'] as string,
+        device: event.node.req.headers['user-agent'] as string,
+        url: findURL.url,
+      })
+
+      return findURL.url
+    }
   }
   catch (error) {
     throw createError({
